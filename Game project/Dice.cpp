@@ -1,15 +1,9 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
-int main() {
-	int n;
-	cin >> n;
-	int sum = 0;
+int RandomInRange(int minn, int maxx) {
 	srand(time(0));
-	for (int i = 0; i < n; i++) {
-		int dice = rand() % 6 + 1;
-		cout << dice << " ";
-		sum += dice;
-	}
-	cout << sum << endl;
+	int r = rand() % (maxx - minn + 1) + minn;
+	return r;
 }
