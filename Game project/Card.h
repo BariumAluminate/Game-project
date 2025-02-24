@@ -16,16 +16,12 @@ public:
         this->m = m;
         this->M = M;
     }
-    int clash_power() {
-		return RandomInRange(m, M);
-    }
 };
 
-bool clash(Dice a, Dice b);
 
 class Card
 {
 public:
     int number;
-	Dice* dices;
-}
+    Dice* dices;
+};

@@ -6,3 +6,9 @@
 4. Một clash xảy ra khi cả 2 người cùng chĩa hướng tấn công vào nhau
 5. Khi clash xảy ra, các dice tương ứng trong lá bài được chọn sẽ nhảy một số ngẫu nhiên, bên nào dice cao hơn sẽ gây được một đòn tấn công lên kẻ địch với sát thương bằng dice đó
 6. Người chơi thua khi hp về 0, thắng khi hp địch về 0
+
+# Version
+Version 0.1:
+	-Chỉ có 1 loại dice
+	-Dice có số cố định từ 1 đến 6
+	-Chỉ có 1 loại lá bài
