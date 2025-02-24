@@ -11,4 +11,4 @@
 Version 0.1:
 	-Chỉ có 1 loại dice
 	-Dice có số cố định từ 1 đến 6
-	-Chỉ có 1 loại lá bài
+	-Chưa có lá bài
