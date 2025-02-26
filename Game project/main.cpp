@@ -67,9 +67,18 @@ int main() {
 	d1.push_back(b1);
 	d1.push_back(c1);
 	a.dices_import(d1);
-	d1.pop_back();
 	b.dices_import(d1);
-	clash(a, b);
-	a.print();
-	b.print();
+	while (a.hp > 0 && b.hp > 0) {
+		clash(a, b);
+		cout << endl;
+		a.print();
+		b.print();
+		cout << endl;
+	}
+	if (a.hp <= 0) {
+		cout << "Character a is dead" << endl;
+	}
+	else {
+		cout << "Character b is dead" << endl;
+	}
 }
