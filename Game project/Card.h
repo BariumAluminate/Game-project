@@ -1,3 +1,6 @@
+#ifndef CARD_H
+#define CARD_H
+
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -8,7 +11,7 @@ const int max_dice = 3;
 class Dice
 {
 public:
-	int offensive; // 0 - defensive, !0 - offensive: 1 - slash, 2 -pierce, 3 - blunt; (-1) - no dice
+    int offensive; // 0 - defensive, !0 - offensive: 1 - slash, 2 -pierce, 3 - blunt; (-1) - no dice
     int m, M;
     Dice() {
         offensive = -1;
@@ -20,8 +23,10 @@ public:
         this->m = m;
         this->M = M;
     }
-	void print() const {
-		cout << "Dice type: " << offensive << endl;
-		cout << "Dice range: " << m << " - " << M << endl;
-	}
+    void print() const {
+        cout << "Dice type: " << offensive << endl;
+        cout << "Dice range: " << m << " - " << M << endl;
+    }
 };
+
+#endif // CARD_H
