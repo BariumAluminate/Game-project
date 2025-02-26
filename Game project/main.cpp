@@ -9,6 +9,5 @@ int main() {
 
 	srand(time(0));
 
-	Player player1;
-	Player player2;
+	
 }

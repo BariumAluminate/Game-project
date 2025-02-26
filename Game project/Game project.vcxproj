@@ -132,7 +132,6 @@
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="Dice.cpp" />
-    <ClCompile Include="Header.cpp" />
     <ClCompile Include="RandomInRange.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
