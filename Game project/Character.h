@@ -43,6 +43,7 @@ public:
 		cout << "Stagger: " << stagger << endl;
 		cout << "Speed range:" << vmin << " - " << vmax << endl;
 		cout << "Energy left: " << energy << endl;
+		cout << "Card in hand: "<<hand.size() << endl;
 	}
 	void hp_damage(int a) {
 		hp -= a;
@@ -84,5 +85,7 @@ public:
 };
 
 void clash(Character& a, Character& b, int numbercard1, int numbercard2);
+
+void one_side_clash(Character& a, Character& b, int numbercard1);
 
 #endif

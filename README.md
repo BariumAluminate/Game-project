@@ -9,9 +9,13 @@
 
 # Vesion 0.1:
 - Tạo ra 2 người chơi
-- Mỗi người chơi sẽ có 1 lá bài
-- Mỗi lá bài sẽ chứa 3 dice
-- Dice sẽ có giá trị ngẫu nhiên trong khoảng [1,6]
-- Mỗi người chơi sẽ có 30 hp
-- Dice luôn là offensive
-- Chỉ có 1 turn duy nhất
+- Thêm vào 4 loại lá bài
+- Khi bị stagger sẽ x2 sát thương và không thể tấn công
+- Thêm energy để tránh người chơi spam bài mạnh
+- One side clash: xảy ra khi chỉ có một bên tấn công
+- Số hiệu lá bài để thay thế cho mảng đồ hoạ
+- Địch có vô hạn energy
+Dự kiến cho 0.2:
+- Thêm defensive dice: giảm damage nhận được khi thua clash và chỉ gây sát thương stagger khi thắng clash
+- Thêm bài
+- Sử dụng triệt để 3 loại offensive dice: thêm hệ số sát thương vào cho các nhân vật

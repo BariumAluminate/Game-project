@@ -7,8 +7,6 @@
 #include "Header.h"
 using namespace std;
 
-const int max_dice = 3;
-
 class Dice
 {
 public:
@@ -45,6 +43,10 @@ public:
 	Card() {
 		energy_consumption = 0;
 		dice_number = 0;
+	}
+	Card(int energy_consumption, int dice_number) {
+		this->energy_consumption = energy_consumption;
+		this->dice_number = dice_number;
 	}
 	Card(int energy_consumption, int dice_number, vector <Dice> dices) {
 		this->energy_consumption = energy_consumption;

@@ -3,7 +3,7 @@
 using namespace std;
 
 void Character::card_option(int& number_card) {
-	while (number_card <= 0 || number_card >= hand.size()) {
+	while (number_card < 0 || number_card > hand.size()) {
 		cout << "Invalid card number, please choose again: ";
 		cin >> number_card;
 	}
@@ -23,12 +23,14 @@ void clash(Character& a, Character& b, int numbercard1, int numbercard2) {
 		if (clashpowera > clashpowerb) {
 			cout << a.name << " win this clash" << endl;
 			cout << "Damage dealt: " << clashpowera - clashpowerb << endl;
-			b.hp_damage(clashpowera - clashpowerb);
+			b.hp_damage(clashpowera);
+			b.stagger_damage(clashpowera);
 		}
 		else if (clashpowera < clashpowerb) {
 			cout << b.name << " win this clash" << endl;
 			cout << "Damage dealt: " << clashpowerb - clashpowera << endl;
-			a.hp_damage(clashpowerb - clashpowera);
+			a.hp_damage(clashpowerb);
+			a.stagger_damage(clashpowerb);
 		}
 	}
 	if (card1.dice_number > card2.dice_number) {
@@ -36,6 +38,7 @@ void clash(Character& a, Character& b, int numbercard1, int numbercard2) {
 		for (int i = m; i < n; i++) {
 			int clashpowera = RandomInRange(card1.dices[i].m, card1.dices[i].M);
 			b.hp_damage(clashpowera);
+			b.stagger_damage(clashpowera);
 		}
 	}
 	if (card1.dice_number < card2.dice_number) {
@@ -43,6 +46,18 @@ void clash(Character& a, Character& b, int numbercard1, int numbercard2) {
 		for (int i = m; i < n; i++) {
 			int clashpowerb = RandomInRange(card2.dices[i].m, card2.dices[i].M);
 			a.hp_damage(clashpowerb);
+			a.stagger_damage(clashpowerb);
+		}
+	}
+}
+
+void one_side_clash(Character& a, Character& b, int numbercard1) {
+	Card card1 = a.hand[numbercard1];
+	for (int i = 0; i < card1.dice_number; i++) {
+		int clashpowera = RandomInRange(card1.dices[i].m, card1.dices[i].M);
+		b.hp_damage(clashpowera);
+		if (b.stagger == 0) {
+			b.hp_damage(clashpowera);
 		}
 	}
 }
