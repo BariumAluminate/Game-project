@@ -21,5 +21,5 @@ Dự kiến cho 0.2:
 - Sử dụng triệt để 3 loại offensive dice: thêm hệ số sát thương vào cho các nhân vật
 
 # Version 0.1.1:
-- Fix bug vector out of range (em xin lỗi vì em code ngu ạ)
+- Fix bug vector out of range (em xin lỗi vì em code chưa tốt ạ)
 - Nếu ai hỏi hết energy làm gì thì em để lá 0 không có gì là có mục đích ạ
