@@ -45,7 +45,7 @@ int main() {
 		if (Enemy.stagger > 0) {
 			cout << "Enemy choose a card " << endl;
 			int l = Enemy.hand.size();
-			number_card1 = RandomInRange(1, l);
+			number_card1 = RandomInRange(1, l-1);
 			cout << number_card1 << endl;
 			Enemy.card_option(number_card1);
 			cout << "Information :" << endl;
