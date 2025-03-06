@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="Dice.cpp" />
-    <ClCompile Include="Game project.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="RandomInRange.cpp" />
   </ItemGroup>
   <ItemGroup>

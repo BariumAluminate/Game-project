@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-dice temp;
+dice temp(0, 0, 0);
 
 card tripleslash(0, 1);
 
