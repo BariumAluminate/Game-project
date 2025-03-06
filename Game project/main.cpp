@@ -1,6 +1,3 @@
-// Game project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <vector>
 #include <ctime>
@@ -11,6 +8,7 @@
 #include "Header.h"
 #include "Card.h"
 #include "Character.h"
+#include "Data.hpp"
 
 using namespace std;
 
@@ -20,6 +18,7 @@ const card nothing(0, 0);
 int main() {
 	srand(static_cast<unsigned int>(time(0)));
 
+	card_def();
 
 	Character Player;
 	Character Enemy;

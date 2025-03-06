@@ -41,11 +41,6 @@ public:
 	int one_side_clash() const {
 		return RandomInRange(m, M);
 	}
-	void set_dice(int type, int minn, int maxx) {
-		offensive = type;
-		m = minn;
-		M = maxx;
-	}
 };
 
 class card
