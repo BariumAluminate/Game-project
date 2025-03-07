@@ -41,13 +41,17 @@ int main() {
 	while (true) {
 		Player.print();
 		Enemy.print();
+		Enemy.hand[1].print();
 		Player.card_show();
 		int number_card;
 		cin >> number_card;
 		Player.card_option(number_card);
+		cout << "Now the clash begin:";
 		card_clash(Player, Enemy, Player.hand[number_card], Enemy.hand[1]);
-		Player.card_discard(number_card);
+		Player.energy -= Player.hand[number_card].energy_consumption;
+		if (number_card != 0) Player.card_discard(number_card);
 		Player.card_draw(deck[RandomInRange(0, deck.size() - 1)]);
+		Player.energy++;
 		if (Player.hp <= 0) {
 			cout << "You lose!";
 			return 0;

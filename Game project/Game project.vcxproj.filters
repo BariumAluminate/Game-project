@@ -43,9 +43,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="CardData.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\README.md" />
   </ItemGroup>
 </Project>

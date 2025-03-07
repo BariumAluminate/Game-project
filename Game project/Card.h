@@ -38,8 +38,9 @@ public:
 	int clash(const dice& other) const {
 		int r1 = RandomInRange(m, M);
 		int r2 = RandomInRange(other.m, other.M);
-		if (r1 > r2) return r1;
-		else if (r1 < r2) return -r2;
+		cout << r1 << "; " << r2<<endl;
+		if (r1 > r2) return r1-r2*other.offensive;
+		else if (r1 < r2) return -r2+r1*offensive;
 		else return 0;
 	}
 	int one_side_clash() const {
