@@ -9,3 +9,4 @@
 # Version 0.1
 - Địch có vô hạn năng lượng và luôn sử dụng cùng 1 lá bài từ đầu đến cuối game
 - Hiện tại chỉ có 2 lá bài
+- Dùng bài chưa mất năng lượng
