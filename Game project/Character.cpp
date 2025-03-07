@@ -3,7 +3,7 @@
 using namespace std;
 
 void Character::card_option(int& number_card) {
-	while (number_card < 0 || number_card > hand.size()) {
+	while (number_card < 0 || number_card >= hand.size()) {
 		cout << "Invalid card number, please choose again: ";
 		cin >> number_card;
 	}

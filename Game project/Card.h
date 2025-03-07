@@ -9,26 +9,30 @@ using namespace std;
 class dice
 {
 public:
-    int offensive; // 0 - defensive, !0 - offensive: 1 - slash, 2 -pierce, 3 - blunt; (-1) - no dice
+    int offensive; // 1 - defensive, 0 - offensive
+	int off_type;
     int m, M;
     dice() {
         offensive = -1;
+		off_type = 0;
         m = 0;
         M = 0;
     }
-    dice(int offensive, int m, int M) {
+    dice(int offensive,int off_type, int m, int M) {
         this->offensive = offensive;
+		this->off_type = off_type;
         this->m = m;
         this->M = M;
     }
     void print() const {
 		cout << "\t";
         cout << "dice type: ";
-		if (offensive == 0) cout << "Defensive" << '\t';
-		else if (offensive == 1) cout << "Slash" << '\t';
-		else if (offensive == 2) cout << "Pierce" << '\t';
-		else if (offensive == 3) cout << "Blunt" << '\t';
-		else cout << "No dice" << '\t';
+		if (offensive == 1) cout << "Defensive" << '\t';
+		else {
+			if (off_type == 1) cout << "Slash" << '\t';
+			if (off_type == 2) cout << "Pierce" << '\t';
+			if (off_type == 3) cout << "Blunt" << '\t';
+		}
         cout << "dice range: " << m << " - " << M << endl;
     }
 	int clash(const dice& other) const {
