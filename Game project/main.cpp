@@ -20,6 +20,9 @@ int main() {
 
 	card_def();
 
+	deck.push_back(weakslash);
+	deck.push_back(tripleslash);
+
 	Character Player;
 	Character Enemy;
 
@@ -30,16 +33,21 @@ int main() {
 
 	Player.card_draw(nothing);
 	Enemy.card_draw(nothing);
+	for (int i = 0; i < 5; i++) {
+		Player.card_draw(deck[RandomInRange(0, deck.size() - 1)]);
+		Enemy.card_draw(deck[RandomInRange(0, deck.size() - 1)]);
+	}
 
 	while (true) {
 		Player.print();
 		Enemy.print();
-		Player.print();
+		Player.card_show();
 		int number_card;
 		cin >> number_card;
+		Player.card_option(number_card);
 		card_clash(Player, Enemy, Player.hand[number_card], Enemy.hand[1]);
 		Player.card_discard(number_card);
-		Player.card_option(number_card);
+		Player.card_draw(deck[RandomInRange(0, deck.size() - 1)]);
 		if (Player.hp <= 0) {
 			cout << "You lose!";
 			return 0;
