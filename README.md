@@ -12,4 +12,4 @@
 - Dùng bài chưa mất năng lượng
 
 # Version 0.1.1
-- Thêm energy depletion cho layer
+- Thêm energy depletion cho player
