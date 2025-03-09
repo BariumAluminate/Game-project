@@ -8,19 +8,18 @@ using namespace std;
 
 class dice
 {
-public:
-    int offensive; // 1 - defensive, 0 - offensive
-	int off_type;
+private:
     int m, M;
+public:
+	int offensive; // 1 - defensive, 0 - offensive
+	
     dice() {
         offensive = -1;
-		off_type = 0;
         m = 0;
         M = 0;
     }
-    dice(int offensive,int off_type, int m, int M) {
+    dice(int offensive, int m, int M) {
         this->offensive = offensive;
-		this->off_type = off_type;
         this->m = m;
         this->M = M;
     }
@@ -29,11 +28,9 @@ public:
         cout << "dice type: ";
 		if (offensive == 1) cout << "Defensive" << '\t';
 		else {
-			if (off_type == 1) cout << "Slash" << '\t';
-			if (off_type == 2) cout << "Pierce" << '\t';
-			if (off_type == 3) cout << "Blunt" << '\t';
+			cout << "Offensive" << '\t';
 		}
-        cout << "dice range: " << m << " - " << M << endl;
+       cout << "dice range: " << m << " - " << M << endl;
     }
 	int clash(const dice& other) const {
 		int r1 = RandomInRange(m, M);

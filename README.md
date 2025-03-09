@@ -13,3 +13,7 @@
 
 # Version 0.1.1
 - Thêm energy depletion cho player
+
+# Version 0.1.2
+-Thêm defensive dice
+-Cập nhật thêm lá fencing

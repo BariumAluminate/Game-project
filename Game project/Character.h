@@ -60,8 +60,8 @@ public:
 			stagger = 0;//stagger cannot be negative
 		}
 	}
-	void sp_damage(int a) {
-		sp -= a;// max sp is 45, min sp is -45
+	void sp_damage(int a, int type) {
+		sp -= a*type;// max sp is 45, min sp is -45
 	}
 	void hp_heal(int a) {
 		hp += a;

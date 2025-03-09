@@ -22,17 +22,34 @@ void card_clash(Character& a, Character& b, card a1, card b1) {
 		int damage = a1.dices[i].clash(b1.dices[i]);
 		if (damage > 0) {
 			cout << a.name << " win the clash;" << endl;
-			cout << "Damage dealt:";
-			b.hp_damage(damage);
-			b.stagger_damage(damage);
-			cout << endl;
+			cout << "Damage dealt:"<<endl;
+			if (a1.dices[i].offensive==0) {
+				cout << "\t HP : " << abs(damage) << endl;
+				b.hp_damage(damage);
+				cout << "\t Stagger : " << abs(damage) << endl;
+				b.stagger_damage(damage);
+				cout << endl;
+			}
+			else {
+				cout << "\t Stagger : " << abs(damage) << endl;
+				b.stagger_damage(damage);
+			}
 		}
 		if (damage < 0) {
 			cout << b.name << " win the clash;" << endl;
-			cout << "Damage dealt:";
-			a.hp_damage(-damage);
-			a.stagger_damage(-damage);
-			cout << endl;
+			cout << "Damage dealt:" << endl;
+			if (b1.dices[i].offensive==0) {
+				cout << "HP : " << abs(damage) << endl;
+				a.hp_damage(-damage);
+				cout << "Stagger : " << abs(damage) << endl;
+				a.stagger_damage(-damage);
+				cout << endl;
+			}
+			else {
+				cout << "Stagger : " << abs(damage) << endl;
+				a.stagger_damage(-damage);
+				cout << endl;
+			}
 		}
 		i++;
 		j++;
